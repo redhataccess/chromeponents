@@ -6,22 +6,49 @@
 
     <head dir="ltr">
 
+        <style type="text/css" media="screen">
+            body { opacity: 0; transition: opacity 0.13s ease-out; }
+            header, footer {
+                position: relative;
+                height: 200px;
+                background: grey;
+                overflow: hidden;
+                border: 3px dashed black;
+            }
+            header:before,
+            footer:before {
+                font-family: monospace;
+                position: absolute;
+                top: 5px;
+                right: 5px;
+                font-size: 4em;
+                color: white;
+            }
+            header:before { content: 'HEADER' }
+            footer:before { content: 'FOOTER' }
+        </style>
+        <script src="node_modules/webcomponents.js/webcomponents-lite.js"></script>
+
+        <link rel="import" href="chrome-sandwich.html">
+
     <!-- HEAD HERE -->
 
 
-    <script type="text/javascript">
-        var siteMapState="home";
-        chrometwo_require(['home'], function(home) {
-            home.init(); 
-        });
-    </script>
+    <!-- <script type="text/javascript"> -->
+    <!--     var siteMapState="home"; -->
+    <!--     chrometwo_require(['home'], function(home) { -->
+    <!--         home.init(); --> 
+    <!--     }); -->
+    <!-- </script> -->
 
+        <script src="init.js"></script>
 
     </head>
 
     <body class="home-page" dir="ltr">
 
         <!-- HEADER HERE -->
+        <chrome-app>
 
         <div class="band band-narrow home-top band-hero band-first">
             <div class="container">
@@ -159,6 +186,7 @@
 
 
         <!-- FOOTER HERE -->
+        </chrome-app>
 
 
     </body>
