@@ -1150,10 +1150,9 @@
 
             ready: function () {
                 var headStuff = this.querySelector('#headstuff');
-                var i = headStuff.children.length;
 
-                while (i--) {
-                    document.head.prependChild(headStuff.children[i]);
+                while (headStuff.children.length) {
+                    document.head.appendChild(headStuff.children[0]);
                 }
             }
         });
