@@ -11,20 +11,36 @@
     <!-- <title>Red Hat Customer Portal</title> -->
 
 
-    <script type="text/javascript">
-        var siteMapState="home";
-        chrometwo_require(['home'], function(home) {
-            home.init();
-        });
-    </script>
+        <!-- This will be fetched via a new, very simple REST service. -->
+        <script type="text/javascript">
+            window.portal = {
+                analytics : {},
+                host      : "https://access.redhat.com",
+                idp_url   : "https://idp.redhat.com",
+                lang      : "en",
+                version   : "e205ee7",
+                nrid      : "14615289",
+                nrlk      : "2a497fa56f"
+            };
+        </script>
+        <!-- <style type="text/css" media="screen"> -->
+        <!--     body { transition: opacity 0.15s ease-out; opacity: 0; } -->
+        <!-- </style> -->
 
-        <script src="bower_components/webcomponentsjs/webcomponents.min.js"></script>
+        <script src="chrome.js"></script>
         <link rel="import" href="components/chrome-app.html">
+
     </head>
 
     <body class="home-page" dir="ltr">
         <chrome-app>
-            <!-- HEADER HERE -->
+
+            <script type="text/javascript">
+                var siteMapState="home";
+                chrometwo_require(['home'], function(home) {
+                    home.init();
+                });
+            </script>
 
             <div class="band band-narrow home-top band-hero band-first">
                 <div class="container">
@@ -159,9 +175,6 @@
                     </div>
                 </div>
             </div>
-
-
-            <!-- FOOTER HERE -->
 
         </chrome-app>
     </body>
