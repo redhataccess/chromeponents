@@ -2,12 +2,76 @@
 
 <dom-module id="chrome-app">
     <template>
-        <link media="all" rel="stylesheet" type="text/css" href="https://access.redhat.com/chrome_themes/nimbus/css/bootstrap.css?v=e205ee7" />
-        <link media="all" rel="stylesheet" type="text/css" href="https://access.redhat.com/chrome_themes/nimbus/css/master-blessed2.css?v=e205ee7" />
-        <link media="all" rel="stylesheet" type="text/css" href="https://access.redhat.com/chrome_themes/nimbus/css/master-blessed1.css?v=e205ee7" />
-        <link media="all" rel="stylesheet" type="text/css" href="https://access.redhat.com/chrome_themes/nimbus/css/master.css?v=e205ee7" />
-        <link href="https://access.redhat.com/webassets/avalon/s/chosen.css?v=e205ee7" rel="stylesheet" type="text/css" />
+        <div id="headstuff">
+            <meta charset="utf-8" />
+            <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
+            <!-- metaInclude -->
+            <meta name="avalon-host-info" content="kcs01.web.prod.ext.phx2.redhat.com" />
+            <meta name="avalon-version" content="e205ee7" />
+            <meta name="google-site-verification" content="nP0a2DWUcOxjRgDDACHEbDptiGIGBrChbghrC0ZzcK0" />
+
+            <meta name="viewport" content="width=device-width, initial-scale=1" />
+            <meta http-equiv="cleartype" content="on" />
+
+            <!-- Chrome, Firefox OS and Opera -->
+            <meta name="theme-color" content="#CC0000">
+            <!-- Windows Phone -->
+            <meta name="msapplication-navbutton-color" content="#CC0000">
+            <!-- iOS Safari -->
+            <meta name="apple-mobile-web-app-status-bar-style" content="#CC0000"><link rel="manifest" href="https://access.redhat.com/webassets/avalon/j/manifest.json">
+            <!-- title -->
+            <title>Red Hat Customer Portal</title>
+            <!-- /title -->
+            <script type="text/javascript">
+                window.portal = {
+                    analytics : {},
+                    host      : "https://access.redhat.com",
+                    idp_url   : "https://idp.redhat.com",
+                    lang      : "en",
+                    version   : "e205ee7",
+                    nrid      : "14615289",
+                    nrlk      : "2a497fa56f"
+                };
+            </script>
+            <!-- cssInclude -->
+
+            <link rel="shortcut icon" href="https://access.redhat.com/webassets/avalon/g/favicon.ico" />
+            <link rel="stylesheet" type="text/css" media="screen, print" href="https://access.redhat.com/webassets/avalon/s/jquery-ui/cp/jquery-ui-1.8.7.custom.css?v=e205ee7" />
+
+            <link media="all" rel="stylesheet" type="text/css" href="https://access.redhat.com/chrome_themes/nimbus/css/bootstrap.css?v=e205ee7" />
+            <link media="all" rel="stylesheet" type="text/css" href="https://access.redhat.com/chrome_themes/nimbus/css/master-blessed2.css?v=e205ee7" />
+            <link media="all" rel="stylesheet" type="text/css" href="https://access.redhat.com/chrome_themes/nimbus/css/master-blessed1.css?v=e205ee7" />
+            <link media="all" rel="stylesheet" type="text/css" href="https://access.redhat.com/chrome_themes/nimbus/css/master.css?v=e205ee7" />
+
+            <link href="https://access.redhat.com/webassets/avalon/s/chosen.css?v=e205ee7" rel="stylesheet" type="text/css" />
+
+            <!--[if lte IE 9]>
+            <link media="all" rel="stylesheet" type="text/css" href="https://access.redhat.com/chrome_themes/nimbus/css/ie.css" />
+            <![endif]-->
+
+            <noscript>
+                <style type="text/css" media="screen"> .primary-nav { display: block; } </style>
+            </noscript>
+
+            <!-- /cssInclude -->
+            <script type="text/javascript" src="https://access.redhat.com/webassets/avalon/j/lib/jquery.min.js?v=e205ee7"></script>
+
+            <script type="text/javascript" src="https://access.redhat.com/webassets/avalon/j/lib/require.js?v=e205ee7" data-main="/webassets/avalon/j/"></script>
+
+            <script type="text/javascript">
+                window.ajq = jQuery;
+            </script>
+
+            <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+            <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+            <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+            <script src="https://access.redhat.com/chrome_themes/nimbus/js/ie8.js"></script>
+            <![endif]-->
+
+
+        </div>
         <div class="home-page">
         <div id="page-wrap" class="page-wrap">
             <div class="top-page-wrap">
@@ -1082,7 +1146,16 @@
 
     <script>
         Polymer({
-            is: 'chrome-app'
+            is: 'chrome-app',
+
+            ready: function () {
+                var headStuff = this.querySelector('#headstuff');
+                var i = headStuff.children.length;
+
+                while (i--) {
+                    document.head.prependChild(headStuff.children[i]);
+                }
+            }
         });
     </script>
 </dom-module>
