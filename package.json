@@ -1,0 +1,19 @@
+{
+  "name": "chromeponents",
+  "version": "1.0.0",
+  "description": "Testing Portal Chrome with Web Components.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/redhataccess/chromeponents.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/redhataccess/chromeponents/issues"
+  },
+  "homepage": "https://github.com/redhataccess/chromeponents#readme"
+}

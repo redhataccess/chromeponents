@@ -8,158 +8,161 @@
 
     <!-- HEAD HERE -->
 
+    <!-- <title>Red Hat Customer Portal</title> -->
+
 
     <script type="text/javascript">
         var siteMapState="home";
         chrometwo_require(['home'], function(home) {
-            home.init(); 
+            home.init();
         });
     </script>
 
-
+        <script src="bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
+        <link rel="import" href="components/chrome-app.html">
     </head>
 
     <body class="home-page" dir="ltr">
+        <chrome-app>
+            <!-- HEADER HERE -->
 
-        <!-- HEADER HERE -->
-
-        <div class="band band-narrow home-top band-hero band-first">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-8">
-                        <div class="home-block">
-                            <h2 class="lead-in">Announcing Red Hat Cloud Suite</h2>
-                            <p class="headline">Cloud infrastructure and application development with a unified management framework.</p>
-                            <p class="strapline">Deliver public cloud like services to your business and developers while maintaining control and visibility.</p>
-                            <a href="https://access.redhat.com/products/red-hat-cloud-suite?intcmp=hp|h|ha|cloudsuiteapr2016&sc_cid=70160000000qAY0AAM" class="cta btn btn-primary">Learn More</a>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4 home-top-cards">
-                        <div id="home-login" class="card card-white card-login" data-portal-tour-1="12">
-                            <div id="hp-loginbox-unauth" class="unauthenticated">
-                                <p>The Red Hat Customer Portal delivers the knowledge, expertise, and guidance available through your Red Hat subscription.</p>
-                                <a href="/login" class="btn btn-accent" id="home-login-btn">Log In</a>
-                            </div>
-                            <div id="hp-loginbox-auth" class="authenticated">
-                                <h2 id="hp-loginbox-name" class="card-heading subheading-flush"></h2>
-                                <p id="hp-loginbox-acct"><span class="property">Red Hat Account Number:</span> <span class="value"></span></p>
-                                <ul class="list-flat">
-                                    <li><a href="https://access.redhat.com/start/?intcmp=701600000011fUwAAI&">Getting Started with Red Hat</a></li>
-                                    <li><a href="https://access.redhat.com/user">My Profile</a></li>
-                                    <li><a href="https://www.redhat.com/wapps/ugc/protected/usermgt/userList.html">User Management</a></li>
-                                </ul>
+            <div class="band band-narrow home-top band-hero band-first">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <div class="home-block">
+                                <h2 class="lead-in">Announcing Red Hat Cloud Suite</h2>
+                                <p class="headline">Cloud infrastructure and application development with a unified management framework.</p>
+                                <p class="strapline">Deliver public cloud like services to your business and developers while maintaining control and visibility.</p>
+                                <a href="https://access.redhat.com/products/red-hat-cloud-suite?intcmp=hp|h|ha|cloudsuiteapr2016&sc_cid=70160000000qAY0AAM" class="cta btn btn-primary">Learn More</a>
                             </div>
                         </div>
-                        <div class="card card-white card-search">
-                            <form class="form-inline" role="form" id="homePageSearchForm" action="/search/browse/search/" method="get" enctype="application/x-www-form-urlencoded">
-                                <div class="form-group">
-                                    <label for="search-query">Search the Knowledgebase</label>
-                                    <div class="input-group">
-                                        <input type="text" name="keyword" id="search-query" class="form-control" placeholder="Enter Your Search Term">
-                                        <span class="input-group-btn">
-                                            <button type="submit" class="btn btn-secondary"><span class="web-icon-search" aria-hidden="true" title="Search"></span></button>
-                                        </span>
-                                    </div>
+
+                        <div class="col-md-4 home-top-cards">
+                            <div id="home-login" class="card card-white card-login" data-portal-tour-1="12">
+                                <div id="hp-loginbox-unauth" class="unauthenticated">
+                                    <p>The Red Hat Customer Portal delivers the knowledge, expertise, and guidance available through your Red Hat subscription.</p>
+                                    <a href="/login" class="btn btn-accent" id="home-login-btn">Log In</a>
                                 </div>
-                            </form>
+                                <div id="hp-loginbox-auth" class="authenticated">
+                                    <h2 id="hp-loginbox-name" class="card-heading subheading-flush"></h2>
+                                    <p id="hp-loginbox-acct"><span class="property">Red Hat Account Number:</span> <span class="value"></span></p>
+                                    <ul class="list-flat">
+                                        <li><a href="https://access.redhat.com/start/?intcmp=701600000011fUwAAI&">Getting Started with Red Hat</a></li>
+                                        <li><a href="https://access.redhat.com/user">My Profile</a></li>
+                                        <li><a href="https://www.redhat.com/wapps/ugc/protected/usermgt/userList.html">User Management</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="card card-white card-search">
+                                <form class="form-inline" role="form" id="homePageSearchForm" action="/search/browse/search/" method="get" enctype="application/x-www-form-urlencoded">
+                                    <div class="form-group">
+                                        <label for="search-query">Search the Knowledgebase</label>
+                                        <div class="input-group">
+                                            <input type="text" name="keyword" id="search-query" class="form-control" placeholder="Enter Your Search Term">
+                                            <span class="input-group-btn">
+                                                <button type="submit" class="btn btn-secondary"><span class="web-icon-search" aria-hidden="true" title="Search"></span></button>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <div class="band band-narrow band-white home-mid">
-            <div class="container">
-                <div class="row home-quick-links" data-portal-tour-1="13">
-                    <div class="col-md-3">
-                        <a href="/management?intcmp=hp|a|a1|mysub&" class="feature feature-w-icon feature-link">
-                            <div class="wrap">
-                                <span class="rh-icon-management-checklist feature-icon-plain feature-icon" aria-hidden="true"></span> <strong class="subheading feature-link-heading">My Subscriptions</strong>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-md-3">
-                        <a href="https://access.redhat.com/labs/registrationassistant/?intcmp=hp|a|a2|regassist&" class="feature feature-w-icon feature-link">
-                            <div class="wrap">
-                                <span class="rh-icon-hosting-support feature-icon-plain feature-icon" aria-hidden="true"></span> <strong class="subheading feature-link-heading">Registration Assistant</strong>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-md-3">
-                        <a href="https://access.redhat.com/support/cases/#/case/new?intcmp=hp|a|a3|case&" class="feature feature-w-icon feature-link">
-                            <div class="wrap">
-                                <span class="rh-icon-office-reception feature-icon-plain feature-icon" aria-hidden="true"></span> <strong class="subheading feature-link-heading">Open a Support Case</strong>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-md-3">
-                        <a href="/support/contact?intcmp=hp|a|a4|contact&" class="feature feature-w-icon feature-link">
-                            <div class="wrap">
-                                <span class="rh-icon-phone-land-line feature-icon-plain feature-icon" aria-hidden="true"></span> <strong class="subheading feature-link-heading">Contact Us</strong>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="band band-narrow band-alt home-bottom band-last">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-3">
-                        <div class="module module-home-news">
-                            <h2 class="module-heading">What&#039;s New</h2>
-                            <div class="home-announcements" id="home-announcements">
-                                <span class="loading">Loading&hellip;</span>
-                            </div>
-                            <p class="more-link"><a href="/announcements">View All</a></p>
+            <div class="band band-narrow band-white home-mid">
+                <div class="container">
+                    <div class="row home-quick-links" data-portal-tour-1="13">
+                        <div class="col-md-3">
+                            <a href="/management?intcmp=hp|a|a1|mysub&" class="feature feature-w-icon feature-link">
+                                <div class="wrap">
+                                    <span class="rh-icon-management-checklist feature-icon-plain feature-icon" aria-hidden="true"></span> <strong class="subheading feature-link-heading">My Subscriptions</strong>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-md-3">
+                            <a href="https://access.redhat.com/labs/registrationassistant/?intcmp=hp|a|a2|regassist&" class="feature feature-w-icon feature-link">
+                                <div class="wrap">
+                                    <span class="rh-icon-hosting-support feature-icon-plain feature-icon" aria-hidden="true"></span> <strong class="subheading feature-link-heading">Registration Assistant</strong>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-md-3">
+                            <a href="https://access.redhat.com/support/cases/#/case/new?intcmp=hp|a|a3|case&" class="feature feature-w-icon feature-link">
+                                <div class="wrap">
+                                    <span class="rh-icon-office-reception feature-icon-plain feature-icon" aria-hidden="true"></span> <strong class="subheading feature-link-heading">Open a Support Case</strong>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-md-3">
+                            <a href="/support/contact?intcmp=hp|a|a4|contact&" class="feature feature-w-icon feature-link">
+                                <div class="wrap">
+                                    <span class="rh-icon-phone-land-line feature-icon-plain feature-icon" aria-hidden="true"></span> <strong class="subheading feature-link-heading">Contact Us</strong>
+                                </div>
+                            </a>
                         </div>
                     </div>
-                    <div class="col-md-3">
-                        <div class="module module-home-tile module-home-tile1">
-                            <h2 data-eh="module-heading" class="module-heading">Product Security</h2>
-                            <div data-eh="home-bottom-card" class="card card-feature card-craggle card-craggle-service-white">
-                                <a href="/blogs/766093/posts/2262281?intcmp=hp|pt|t1|apr2016securityreport&sc_cid=70160000000qAY5AAM">
-                                    <h3 class="product-desc">
-                                        Red Hat Product Security: A year in review<br><br>Read the 2015 Risk Report
-                                    </h3>
-                                </a><!--
-                                --></div><!--
-                            --></div><!--
-                        --></div>
-                    <div class="col-md-3">
-                        <div class="module module-home-tile module-home-tile2">
-                            <h2 data-eh="module-heading" class="module-heading">Access Labs</h2>
-                            <div data-eh="home-bottom-card" class="card card-feature card-craggle card-craggle-service-white">
-                                <a href="/labs/rhevupgradehelper/?intcmp=hp|pt|t2|apr2016rhevupgradelab&sc_cid=70160000000qAYAAA2">
-                                    <h3 class="product-desc">
-                                        Get the latest version of Red Hat Enterprise Virtualization with the RHEV Upgrade Helper Lab
-                                    </h3>
-                                    <!-- <span class=\"rh\">...</span><span class=\"product\">...</span><span class=\"version\">...</span> -->
-                                </a><!--
-                                --></div><!--
-                            --></div><!--
-                        --></div>
-                    <div class="col-md-3">
-                        <div class="module module-home-tile module-home-tile3">
-                            <h2 data-eh="module-heading" class="module-heading">Red Hat Summit</h2>
-                            <div data-eh="home-bottom-card" class="card card-feature card-craggle card-craggle-virt-white">
-                                <a href="https://www.redhat.com/en/summit?intcmp=hp|pt|t3|summit2016&sc_cid=70160000000qAYFAA2">
-                                    <h3 class="product-desc">
-                                        June 27-30, 2016<br><br>Use code CEE16 to register for only $995
-                                    </h3>
-                                </a><!--
-                                --></div><!--
-                            --></div><!--
-                        --></div>
                 </div>
             </div>
-        </div>
+
+            <div class="band band-narrow band-alt home-bottom band-last">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="module module-home-news">
+                                <h2 class="module-heading">What&#039;s New</h2>
+                                <div class="home-announcements" id="home-announcements">
+                                    <span class="loading">Loading&hellip;</span>
+                                </div>
+                                <p class="more-link"><a href="/announcements">View All</a></p>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="module module-home-tile module-home-tile1">
+                                <h2 data-eh="module-heading" class="module-heading">Product Security</h2>
+                                <div data-eh="home-bottom-card" class="card card-feature card-craggle card-craggle-service-white">
+                                    <a href="/blogs/766093/posts/2262281?intcmp=hp|pt|t1|apr2016securityreport&sc_cid=70160000000qAY5AAM">
+                                        <h3 class="product-desc">
+                                            Red Hat Product Security: A year in review<br><br>Read the 2015 Risk Report
+                                        </h3>
+                                    </a><!--
+                                    --></div><!--
+                                --></div><!--
+                            --></div>
+                        <div class="col-md-3">
+                            <div class="module module-home-tile module-home-tile2">
+                                <h2 data-eh="module-heading" class="module-heading">Access Labs</h2>
+                                <div data-eh="home-bottom-card" class="card card-feature card-craggle card-craggle-service-white">
+                                    <a href="/labs/rhevupgradehelper/?intcmp=hp|pt|t2|apr2016rhevupgradelab&sc_cid=70160000000qAYAAA2">
+                                        <h3 class="product-desc">
+                                            Get the latest version of Red Hat Enterprise Virtualization with the RHEV Upgrade Helper Lab
+                                        </h3>
+                                        <!-- <span class=\"rh\">...</span><span class=\"product\">...</span><span class=\"version\">...</span> -->
+                                    </a><!--
+                                    --></div><!--
+                                --></div><!--
+                            --></div>
+                        <div class="col-md-3">
+                            <div class="module module-home-tile module-home-tile3">
+                                <h2 data-eh="module-heading" class="module-heading">Red Hat Summit</h2>
+                                <div data-eh="home-bottom-card" class="card card-feature card-craggle card-craggle-virt-white">
+                                    <a href="https://www.redhat.com/en/summit?intcmp=hp|pt|t3|summit2016&sc_cid=70160000000qAYFAA2">
+                                        <h3 class="product-desc">
+                                            June 27-30, 2016<br><br>Use code CEE16 to register for only $995
+                                        </h3>
+                                    </a><!--
+                                    --></div><!--
+                                --></div><!--
+                            --></div>
+                    </div>
+                </div>
+            </div>
 
 
-        <!-- FOOTER HERE -->
+            <!-- FOOTER HERE -->
 
-
+        </chrome-app>
     </body>
 </html>

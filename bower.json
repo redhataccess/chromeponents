@@ -1,0 +1,21 @@
+{
+  "name": "chromeponents",
+  "description": "Testing Portal Chrome with Web Components.",
+  "main": "index.js",
+  "authors": [
+    "Kyle Buchanan <kylebuch8@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/redhataccess/chromeponents",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#^1.4.0"
+  }
+}
