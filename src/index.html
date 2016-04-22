@@ -6,26 +6,23 @@
 
     <head dir="ltr">
 
-    <!-- HEAD HERE -->
-
-    <!-- <title>Red Hat Customer Portal</title> -->
-
+        <title>Red Hat Customer Portal</title>
 
         <!-- This will be fetched via a new, very simple REST service. -->
         <script type="text/javascript">
             window.portal = {
                 analytics : {},
-                host      : "https://access.redhat.com",
-                idp_url   : "https://idp.redhat.com",
+                host      : "https://dev-mclayton.usersys.redhat.com",
+                idp_url   : "https://idp.dev2.redhat.com",
                 lang      : "en",
                 version   : "e205ee7",
                 nrid      : "14615289",
                 nrlk      : "2a497fa56f"
             };
         </script>
-        <!-- <style type="text/css" media="screen"> -->
-        <!--     body { transition: opacity 0.15s ease-out; opacity: 0; } -->
-        <!-- </style> -->
+        <style type="text/css" media="screen">
+            body { transition: opacity 0.15s ease-out; opacity: 0; }
+        </style>
 
         <script src="chrome.js"></script>
         <link rel="import" href="components/chrome-app.html">
@@ -33,7 +30,6 @@
     </head>
 
     <body class="home-page" dir="ltr">
-        <chrome-app>
 
             <script type="text/javascript">
                 var siteMapState="home";
@@ -41,6 +37,8 @@
                     home.init();
                 });
             </script>
+
+        <chrome-app>
 
             <div class="band band-narrow home-top band-hero band-first">
                 <div class="container">
