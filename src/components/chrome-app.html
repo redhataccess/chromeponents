@@ -1146,7 +1146,12 @@
 
             ready: function () {
                 var headElements = this.querySelector('#thing');
-                console.log(this);
+                console.log(headElements);
+
+                var i = headElements.children.length;
+                while (i--) {
+                    document.head.appendChild(headElements.children[i]);
+                }
             }
         });
     </script>
