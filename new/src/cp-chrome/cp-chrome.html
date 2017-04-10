@@ -1,0 +1,20 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../cp-head/cp-head.html">
+<link rel="import" href="../cp-sandwich/cp-sandwich.html">
+
+<dom-module id="cp-chrome">
+    <template>
+        <style>
+            :host {
+                display: block;
+            }
+        </style>
+
+        <cp-sandwich env="[[envMap]]" locale="[[locale]]">
+            <content></content>
+        </cp-sandwich>
+
+    </template>
+
+    <script src="cp-chrome.js"></script>
+</dom-module>

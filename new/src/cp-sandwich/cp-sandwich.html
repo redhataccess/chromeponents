@@ -1,0 +1,25 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+
+<dom-module id="cp-sandwich">
+    <template>
+        <header>HEADER<sub>([[locale]])</sub></header>
+        <content></content>
+        <footer>FOOTER<sub>([[locale]])</sub></footer>
+    </template>
+
+    <script>
+        Polymer({
+
+            is: 'cp-sandwich',
+
+            ready: function () {
+                console.log('cp-sandwich ready');
+            },
+
+            created: function () {
+                console.log('cp-sandwich created');
+            },
+
+        });
+    </script>
+</dom-module>

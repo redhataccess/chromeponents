@@ -1,0 +1,7 @@
+{
+  "name": "chromeponents",
+  "short_name": "chromeponents",
+  "description": "Red Hat Customer Portal",
+  "start_url": "/",
+  "display": "standalone"
+}
